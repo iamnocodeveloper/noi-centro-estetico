@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-background": "#181d1c", "on-tertiary-fixed-variant": "#524531", "tertiary-fixed": "#f5dfc5", "error": "#ba1a1a", "inverse-primary": "#adcec3", "on-secondary": "#ffffff", "inverse-surface": "#2c3130", "on-primary-fixed-variant": "#2e4c44", "on-error-container": "#93000a", "tertiary-container": "#514330", "inverse-on-surface": "#edf2f0", "surface-variant": "#dfe3e1", "on-tertiary-container": "#c4b097", "primary-container": "#2d4b43", "error-container": "#ffdad6", "surface-bright": "#f6faf8", "primary-fixed-dim": "#adcec3", "background": "#f6faf8", "secondary-fixed-dim": "#e9c176", "tertiary-fixed-dim": "#d8c3aa", "on-secondary-fixed": "#261900", "on-secondary-container": "#785a1a", "on-tertiary": "#ffffff", "on-surface": "#181d1c", "on-surface-variant": "#414846", "surface-container-high": "#e5e9e7", "surface-tint": "#46645c", "on-tertiary-fixed": "#241a09", "outline-variant": "#c1c8c4", "on-secondary-fixed-variant": "#5d4201", "on-primary": "#ffffff", "primary": "#16342d", "tertiary": "#392d1b", "on-primary-fixed": "#01201a", "surface": "#f6faf8", "outline": "#717976", "surface-dim": "#d6dbd9", "on-primary-container": "#99bab0", "on-error": "#ffffff", "surface-container-low": "#f0f5f2", "surface-container-highest": "#dfe3e1", "surface-container": "#eaefed", "secondary": "#775a19", "secondary-fixed": "#ffdea5", "surface-container-lowest": "#ffffff", "primary-fixed": "#c8eadf", "secondary-container": "#fed488" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "space-md": "1rem", "space-xl": "2.5rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin": "3rem", "margin-mobile": "1.25rem", "space-sm": "0.5rem", "gutter": "1.5rem" }, fontFamily: { "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "display-lg": ["Playfair Display"], "title-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "display-lg-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"] }, fontSize: { "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}], "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}], "body-lg": ["17px", {"lineHeight": "28px", "fontWeight": "400"}], "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "display-lg": ["52px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600"}], "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500"}], "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}], "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-sm": ["22px", {"lineHeight": "30px", "fontWeight": "600"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-2"><div class="flex items-center gap-space-sm"><img alt="NOI Centro Estético Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W5rx5fH7VY03ZavLzNZNxnJFMYjV9zKSsyN4TioyzKRFtocl7pZXBewKmwkR5ibHizYIe_0AZQO_oJ6-U2Y_eO6x2jiuuV2iECYaFMIglEHCtM1hcWz8PRZmxS_kkNQgP8bbrHmIbWkYxyHHeHPBuco4WMImrg0Ah40hXYPJxW9lF8l9VM4zvtqRTXiVGVM4Y7uqQXnMPpneX3osr6Dsg-hQw91GOCrR0q9e18dRJvfYyPagN61EE-MUV9"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight font-medium">NOI</span><span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase leading-none">Inicio</span></div></div><div class="flex items-center gap-1"><a aria-label="Llamar al centro" class="w-11 h-11 flex items-center justify-center rounded-full text-primary hover:bg-surface-container transition-colors" href="tel:0969539205"><span class="material-symbols-outlined text-[20px]">call</span></a><button aria-label="Cambiar tema" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><a class="hidden sm:flex items-center gap-1 h-9 px-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md transition-all" data-path="agendar-cita" href="#"><span class="material-symbols-outlined text-[16px]">calendar_today</span><span>Agendar</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative px-gutter-mobile pt-4 pb-8 flex flex-col gap-4 overflow-hidden">
+<!-- Ambient Botanical Backlight -->
+<div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-secondary-fixed/40 blur-3xl -z-10 pointer-events-none"></div>
+<div class="absolute top-48 -left-20 w-56 h-56 rounded-full bg-primary-fixed/50 blur-3xl -z-10 pointer-events-none"></div>
+<!-- Reputation Badge -->
+<div class="self-start flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm">
+<div class="flex items-center text-[#FBBC05]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">4.9 en Google Maps</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">(+280 cuencanas/os)</span>
+</div>
+<!-- Hero Title & Subtitle -->
+<div class="flex flex-col gap-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight font-medium">
+        Tu Belleza y Bienestar en Manos Expertas en el Corazón de Cuenca
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Tratamientos estéticos faciales, corporales y masajes terapéuticos de vanguardia médica. Diagnóstico personalizado y atención exclusiva.
+      </p>
+</div>
+<!-- Hero Visual Preview Card -->
+<div class="relative w-full rounded-xl overflow-hidden shadow-md bg-surface-container-low h-48">
+<img class="w-full h-full object-cover" data-alt="Modern serene aesthetic medical sanctuary in Cuenca Ecuador with soft natural sunlight filtering through minimalist botanical monstera plants, sage green and champagne gold decor accents, elegant treatment bed with warm plush white linens and medical grade skin devices." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaUbrQrALYal0Nyt_i7dAL4YUnx-lY7tdYTji5IJf_faDp-ngMimgcLCS5bbmqr2a8R5RMWSQghsEq4YVaA7FyeeNDqgZpgxuHRDvXHvbyF9DDODyCbqyt0tLAdKiuKbXjLrsuFs_y1Hu1cS07K8cPP0dCVcbjwHczD7MuzfUrglOlMsIU9-eby87Imf4KqGfcZ3HGxDyJB1bsT2lE2Gwwqt1FBBAVA9Nmr6mb6AaTPFKVB8ynShuWJg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed animate-ping"></span>
+<span class="font-label-md text-label-md">Atención Personalizada Hoy</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest/20 backdrop-blur-md px-2 py-0.5 rounded-full">Sector El Vergel / Solano</span>
+</div>
+</div>
+<!-- CTAs -->
+<div class="flex flex-col gap-2.5 pt-1">
+<a class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-primary text-on-primary font-title-md text-title-md shadow-md active:scale-[0.98] transition-transform" href="https://api.whatsapp.com/send?phone=593969539205&amp;text=Hola%20NOI%20Centro%20Est%C3%A9tico,%20deseo%20cotizar%20un%20tratamiento" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">chat</span>
+<span>Cotizar en WhatsApp</span>
+</a>
+<a class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-surface-container-lowest text-primary font-title-md text-title-md shadow-sm active:scale-[0.98] transition-transform" href="#modulo-citas">
+<span class="material-symbols-outlined text-[20px] text-primary">calendar_month</span>
+<span>Agendar Cita Online</span>
+</a>
+</div>
+<!-- Trust Badges Strip -->
+<div class="grid grid-cols-3 gap-1.5 pt-2">
+<div class="flex flex-col items-center text-center p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-secondary">location_on</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Ubicación</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Céntrica Cuenca</span>
+</div>
+<div class="flex flex-col items-center text-center p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Protocolos</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">100% Seguros</span>
+</div>
+<div class="flex flex-col items-center text-center p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[20px] text-secondary">workspace_premium</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface mt-1">Experiencia</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+8 Años</span>
+</div>
+</div>
+</section>
+<!-- QUICK CONVENIENCE BANNER -->
+<section class="px-gutter-mobile pb-6">
+<div class="flex items-center gap-3 p-3.5 rounded-xl bg-secondary-container text-on-secondary-container shadow-sm">
+<span class="material-symbols-outlined text-[24px] text-secondary shrink-0">bolt</span>
+<p class="font-body-sm text-body-sm font-medium">
+        Cotiza en 30 segundos desde tu celular y reserva 24/7 sin esperar a que abramos.
+      </p>
+</div>
+</section>
+<!-- SERVICIOS DESTACADOS -->
+<section class="px-gutter-mobile py-4 flex flex-col gap-4">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-bold">Protocolos Clínicos</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Servicios de Alta Gama</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cuenca, EC</span>
+</div>
+<!-- Cards List -->
+<div class="flex flex-col gap-3.5">
+<!-- Servicio 1 -->
+<article class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex gap-3">
+<img class="w-20 h-20 rounded-lg object-cover shrink-0 bg-surface-container" data-alt="Dermatological facial hydro-dermabrasion deep cleansing procedure on radiant skin with gentle blue LED lighting in peaceful medical spa setting with warm earthy herbal tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU2efULcUuu_F0lUwkwuvne9bTw3DyyMPvXpxvh_Kwkgf-MHZ01YtIJDXt6kaKew3PEWicN6IF0j1K5cp1rOwMXItSUrZa-7fzYOevMq1iW188hEGIjcyJlUEzHVbY9EPG6FnpfkRfj4vH8PmKnCe246oFOQCH9DA2A-auoXFRzs-KVPCm8tQWj1DYun2wmYXFteiKrAul-higxrPJWCCsP2b50aavt9qbpx0cEOwQOHbQCg5Dvy_ylw"/>
+<div class="flex flex-col justify-between min-w-0">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Facial Clínico</span>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Limpieza &amp; Hidrodermoabrasión</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Piel luminosa sin marcas rojas, extracción ultrasónica y nutrición profunda.</p>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<span class="font-title-md text-title-md text-primary font-bold">Desde $35</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 60 min
+              </span>
+</div>
+</div>
+</div>
+<a class="w-full h-10 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-low text-primary font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors" href="https://api.whatsapp.com/send?phone=593969539205&amp;text=Hola%20NOI,%20deseo%20cotizar%20Limpieza%20Facial%20Profunda" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Cotizar este servicio</span>
+</a>
+</article>
+<!-- Servicio 2 -->
+<article class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex gap-3">
+<img class="w-20 h-20 rounded-lg object-cover shrink-0 bg-surface-container" data-alt="Holistic therapy back massage with smooth warm volcanic black stones placed along spine in dim luxury atmospheric spa room surrounded by herbal oils and soothing sage decor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-3HMw3jYL61skq4pWOXTJOzEJz2NpukZVudv5kNEHZDDSeSO-X8jM9xbxrZ2gnoPsgLGenvJuCwhal_7GFdoT7D8zw8eQ5zc449N6XnW0qAT6Fdl-lkseoEhM-ix0TgXk3BZBc23stpgAMzRsgCW2PwW_u7a3lzntc_3SpjXuLrvPdOk18mNzve-Lem0l21UFmBlVxh7VNFX7tvOKrC88RXNAK77ndX2EVIFGaFCIQHLsiGvL_zQ-6Q"/>
+<div class="flex flex-col justify-between min-w-0">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Bienestar Integral</span>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Masajes Piedras Volcánicas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Descontracturante muscular, aromaterapia orgánica y equilibrio de tensión.</p>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<span class="font-title-md text-title-md text-primary font-bold">Desde $40</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 75 min
+              </span>
+</div>
+</div>
+</div>
+<a class="w-full h-10 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-low text-primary font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors" href="https://api.whatsapp.com/send?phone=593969539205&amp;text=Hola%20NOI,%20deseo%20cotizar%20Masaje%20con%20Piedras%20Volcanicas" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Cotizar este servicio</span>
+</a>
+</article>
+<!-- Servicio 3 -->
+<article class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex gap-3">
+<img class="w-20 h-20 rounded-lg object-cover shrink-0 bg-surface-container" data-alt="Non-invasive aesthetic body contouring treatment with modern RF probe, ultrasound cavitation on abdomen in clean luxury medical clinic with emerald green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR__0XjQquCZ5f3N3xVfyFF6VXlUnL3lBDNus8bnEur24N3CM9Jtyn7wVml5WvNrBf1hE3wgD3ytH2u81MwG66De3Q_fzMauQl2qGTgdeDxiO-Qluzp676-Nw3FxXi77vrm1APS331jBfjtx5GtVimMYKGsWvcg_d68Q7TAxhV05NJ0ekz0hjFomK7dRdW2eN6VksLQkeZj3hC81KefCTR7KnqbdAMwb0mLuilZrXFSaBwlzwmJyasow"/>
+<div class="flex flex-col justify-between min-w-0">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Corporal Clínico</span>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Moldeado Corporal No Invasivo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Cavitación médica, radiofrecuencia tensora y drenaje linfático asistido.</p>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<span class="font-title-md text-title-md text-primary font-bold">Desde $50</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 50 min
+              </span>
+</div>
+</div>
+</div>
+<a class="w-full h-10 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-low text-primary font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors" href="https://api.whatsapp.com/send?phone=593969539205&amp;text=Hola%20NOI,%20deseo%20cotizar%20Moldeado%20Corporal" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Cotizar este servicio</span>
+</a>
+</article>
+<!-- Servicio 4 -->
+<article class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex gap-3">
+<img class="w-20 h-20 rounded-lg object-cover shrink-0 bg-surface-container" data-alt="Painless diode laser hair removal session with chilled tip applicator on smooth skin, hygienic high-tech aesthetic medical suite with gold foil accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMnbTJgO4OOAiMIgx0bwcauvlgADgC2BhBr1YWY-d9YPfSLVNbSPGQ7WWP0l6QMoSH_gou_M9wGehU_WFIotguFIQ2NANHf46I62I5cxXmoDGBEaa6UJt5L98upMEls-j6gh1V9lbadCuEF1a9JrMafenuXCiJPoNTnXqYClMGwLJQxeF1VBv5sekLeNtCVY4PNsHRDRoQ7TlH_pnVOcesW0zAmt5uFwU_d9s12ruz_ByuUQEiGejXYA"/>
+<div class="flex flex-col justify-between min-w-0">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Tecnología Láser</span>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Depilación Láser Diodo Indoloro</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Cabezal ultrafrío, resultados visibles desde la 1ª sesión y para todo fototipo.</p>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<span class="font-title-md text-title-md text-primary font-bold">Desde $25</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 30 min
+              </span>
+</div>
+</div>
+</div>
+<a class="w-full h-10 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-low text-primary font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors" href="https://api.whatsapp.com/send?phone=593969539205&amp;text=Hola%20NOI,%20deseo%20cotizar%20Depilacion%20Laser" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Cotizar este servicio</span>
+</a>
+</article>
+<!-- Servicio 5 -->
+<article class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex gap-3">
+<img class="w-20 h-20 rounded-lg object-cover shrink-0 bg-surface-container" data-alt="Cosmetic doctor performing gentle non-invasive anti-aging facial collagen booster procedure on client cheek, soft warm lighting, botanical luxury medical atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIyrtiaVeGdJ_msuWYt5PQ9hL22A5hldsqAvIzNmSucs1ZFjF6PBXrpFwvVq2FKZdH2IXtWdZMZwb-iSnd8UVsdzln5ttG5XyD0lA31S__VEPGVHKnfwV55laac5pjaDa4h8j8blGW9WAVbTGBywGN2e-KrPTZCMwqxAVoT0H_Y_JSf2Y9d93hqkb2n75xsDbuwtu7M8jPfIjXba_ohg0T4K-IdmnVXWFxJOy6O-NgLPiym0yF5giMDA"/>
+<div class="flex flex-col justify-between min-w-0">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Anti-Aging Avanzado</span>
+<h3 class="font-title-md text-title-md text-on-surface truncate">Bioestimuladores de Colágeno</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Reafirmación dérmica natural, armonización y luminosidad duradera.</p>
+</div>
+<div class="flex items-center gap-3 pt-1">
+<span class="font-title-md text-title-md text-primary font-bold">Desde $80</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 60 min
+              </span>
+</div>
+</div>
+</div>
+<a class="w-full h-10 flex items-center justify-center gap-1.5 rounded-lg bg-surface-container-low text-primary font-label-lg text-label-lg hover:bg-primary hover:text-on-primary transition-colors" href="https://api.whatsapp.com/send?phone=593969539205&amp;text=Hola%20NOI,%20deseo%20cotizar%20Bioestimuladores%20de%20Colageno" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Cotizar este servicio</span>
+</a>
+</article>
+</div>
+</section>
+<!-- MÓDULO INTERACTIVO DE CITAS (3 PASOS) -->
+<section class="px-gutter-mobile py-6 flex flex-col gap-4" id="modulo-citas">
+<div class="p-5 rounded-2xl bg-surface-container-low shadow-md flex flex-col gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm">3</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-widest">Reserva Inmediata</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary mt-1">Agenda tu Turno Online</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Elige tu tratamiento, fecha y confirma directamente en segundos.</p>
+</div>
+<!-- Paso 1: Selección de Servicio -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">1. Selecciona Tratamiento</label>
+<div class="relative">
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm appearance-none shadow-sm focus:outline-none focus:ring-0" id="reserva-tratamiento">
+<option value="Limpieza Facial &amp; Hidrodermoabrasión">Limpieza Facial &amp; Hidrodermoabrasión ($35)</option>
+<option value="Masaje con Piedras Volcánicas">Masaje con Piedras Volcánicas ($40)</option>
+<option value="Moldeado Corporal No Invasivo">Moldeado Corporal No Invasivo ($50)</option>
+<option value="Depilación Láser Diodo">Depilación Láser Diodo ($25)</option>
+<option value="Bioestimuladores de Colágeno">Bioestimuladores de Colágeno ($80)</option>
+<option value="Diagnóstico Facial Integral (Cortesía)">Diagnóstico Facial Integral (Gratuito)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Paso 2: Selección de Día -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface font-semibold">2. Elige el Día</label>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Esta Semana</span>
+</div>
+<!-- Selector Horizontal de Días -->
+<div class="grid grid-cols-6 gap-1" id="dias-container">
+<button class="dia-btn flex flex-col items-center py-2 rounded-lg bg-primary text-on-primary shadow-sm" data-dia="Lun 17" type="button">
+<span class="font-label-sm text-label-sm opacity-80">LUN</span>
+<span class="font-title-md text-title-md font-bold">17</span>
+</button>
+<button class="dia-btn flex flex-col items-center py-2 rounded-lg bg-surface-container-lowest text-on-surface" data-dia="Mar 18" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">MAR</span>
+<span class="font-title-md text-title-md font-bold">18</span>
+</button>
+<button class="dia-btn flex flex-col items-center py-2 rounded-lg bg-surface-container-lowest text-on-surface" data-dia="Mié 19" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">MIÉ</span>
+<span class="font-title-md text-title-md font-bold">19</span>
+</button>
+<button class="dia-btn flex flex-col items-center py-2 rounded-lg bg-surface-container-lowest text-on-surface" data-dia="Jue 20" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">JUE</span>
+<span class="font-title-md text-title-md font-bold">20</span>
+</button>
+<button class="dia-btn flex flex-col items-center py-2 rounded-lg bg-surface-container-lowest text-on-surface" data-dia="Vie 21" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">VIE</span>
+<span class="font-title-md text-title-md font-bold">21</span>
+</button>
+<button class="dia-btn flex flex-col items-center py-2 rounded-lg bg-surface-container-lowest text-on-surface" data-dia="Sáb 22" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SÁB</span>
+<span class="font-title-md text-title-md font-bold">22</span>
+</button>
+</div>
+</div>
+<!-- Paso 3: Selección de Horario -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">3. Horario Disponible</label>
+<div class="grid grid-cols-3 gap-2" id="horas-container">
+<button class="hora-btn py-2 px-1 text-center rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm" data-hora="09:30 AM" type="button">09:30 AM</button>
+<button class="hora-btn py-2 px-1 text-center rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm" data-hora="11:00 AM" type="button">11:00 AM</button>
+<button class="hora-btn py-2 px-1 text-center rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm" data-hora="03:00 PM" type="button">03:00 PM</button>
+<button class="hora-btn py-2 px-1 text-center rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm" data-hora="05:00 PM" type="button">05:00 PM</button>
+<button class="hora-btn py-2 px-1 text-center rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm" data-hora="06:30 PM" type="button">06:30 PM</button>
+<div class="py-2 px-1 text-center rounded-lg bg-surface-container-highest text-on-surface-variant/50 font-label-md text-label-md cursor-not-allowed">07:00 PM (Ocupado)</div>
+</div>
+</div>
+<!-- Resumen en tiempo real -->
+<div class="p-3 rounded-xl bg-surface-container-lowest flex items-center justify-between shadow-inner">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Turno Seleccionado:</span>
+<span class="font-title-md text-title-md text-primary font-bold" id="resumen-texto">Lun 17 · 09:30 AM</span>
+</div>
+<span class="material-symbols-outlined text-[24px] text-primary">event_available</span>
+</div>
+<!-- Confirmar y Enviar a WhatsApp / CRM -->
+<button class="w-full h-12 flex items-center justify-center gap-2 rounded-xl bg-primary text-on-primary font-title-md text-title-md shadow-md active:scale-[0.98] transition-transform" id="btn-confirmar-cita" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">check_circle</span>
+<span>Confirmar Cita Inmediata</span>
+</button>
+<p class="font-label-sm text-label-sm text-center text-on-surface-variant">
+        🔒 Reserva garantizada sin cobros anticipados. Pago en cabina.
+      </p>
+</div>
+</section>
+<!-- FORMULARIO DE CAPTURA DE PROSPECTOS CRM -->
+<section class="px-gutter-mobile py-6">
+<div class="p-5 rounded-2xl bg-surface-container-lowest shadow-md flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-widest">Diagnóstico Sin Costo</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Recibe tu Diagnóstico Estético Gratuito en Cuenca</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nuestros especialistas evalúan tu piel y te envían un plan clínico personalizado con cotización directa.</p>
+</div>
+<form class="flex flex-col gap-3" id="crm-form">
+<!-- Nombre -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Nombre Completo *</label>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none" id="crm-nombre" placeholder="Ej: María Augusta Cordero" required="" type="text"/>
+</div>
+<!-- WhatsApp con prefijo -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Número de WhatsApp *</label>
+<div class="flex gap-2">
+<span class="h-11 px-3 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md font-bold shrink-0">🇪🇨 +593</span>
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none" id="crm-telefono" placeholder="098 765 4321" required="" type="tel"/>
+</div>
+</div>
+<!-- Zona o Tratamiento de Interés -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Tratamiento o Zona de Interés *</label>
+<div class="relative">
+<select class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none focus:outline-none" id="crm-interes">
+<option value="Limpieza Facial &amp; Manchas">Rostro: Limpieza profunda / Manchas / Acné</option>
+<option value="Anti-Aging &amp; Flacidez">Rostro: Líneas de expresión &amp; Colágeno</option>
+<option value="Reducción Corporal &amp; Grasa Localizada">Cuerpo: Abdomen, brazos o piernas</option>
+<option value="Depilación Láser Definitiva">Depilación Láser Diodo Zonas</option>
+<option value="Masajes Terapéuticos &amp; Estrés">Alivio de Dolor Muscular &amp; Estrés</option>
+<option value="Evaluación Integral Completa">Quiero que una especialista me oriente</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Horario de Contacto Preferido -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">¿Cuándo prefieres que te contactemos?</label>
+<div class="grid grid-cols-3 gap-2">
+<label class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm cursor-pointer">
+<input checked="" class="accent-primary" name="horario-contacto" type="radio" value="Mañana"/>
+<span>Mañana</span>
+</label>
+<label class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm cursor-pointer">
+<input class="accent-primary" name="horario-contacto" type="radio" value="Tarde"/>
+<span>Tarde</span>
+</label>
+<label class="flex items-center gap-1.5 p-2 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm cursor-pointer">
+<input class="accent-primary" name="horario-contacto" type="radio" value="Cualquier Hora"/>
+<span>Cualquiera</span>
+</label>
+</div>
+</div>
+<!-- Notas Especiales -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface">Notas o detalles adicionales</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none" id="crm-notas" placeholder="Ej: Me caso en un mes y busco preparar mi piel..." rows="2"></textarea>
+</div>
+<!-- Checkbox Consentimiento -->
+<label class="flex items-start gap-2.5 pt-1 cursor-pointer">
+<input checked="" class="mt-1 accent-primary shrink-0" id="crm-consentimiento" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Acepto recibir cotización médica y promociones exclusivas vía WhatsApp conforme a la política de privacidad de NOI.</span>
+</label>
+<!-- Submit Button -->
+<button class="w-full h-12 mt-2 flex items-center justify-center gap-2 rounded-xl bg-primary text-on-primary font-title-md text-title-md shadow-md active:scale-[0.98] transition-transform" type="submit">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">assignment_turned_in</span>
+<span>Solicitar Diagnóstico y Cotización VIP</span>
+</button>
+</form>
+</div>
+</section>
+<!-- PRUEBA SOCIAL Y TESTIMONIOS REALES EN CUENCA -->
+<section class="px-gutter-mobile py-6 flex flex-col gap-4">
+<div>
+<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-bold">Confianza Comprobada</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Opiniones de Pacientes en Cuenca</h2>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Testimonio 1 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim text-on-primary-fixed flex items-center justify-center font-bold text-label-md">CV</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Camila V.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sector Puertas del Sol</span>
+</div>
+</div>
+<div class="flex text-[#FBBC05]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+          "Excelente atención. Me realicé la limpieza profunda y el cambio en mi piel fue inmediato. La atención por WhatsApp fue súper rápida y me resolvieron todas las dudas antes de ir."
+        </p>
+</div>
+<!-- Testimonio 2 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-label-md">FM</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Dr. Fernando M.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Av. Solano</span>
+</div>
+</div>
+<div class="flex text-[#FBBC05]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+          "El masaje descontracturante superó mis expectativas después de una semana pesada en quirófano. Un espacio impecable, elegante y con absoluta privacidad en Cuenca."
+        </p>
+</div>
+<!-- Testimonio 3 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-label-md">PR</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Paola R.</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Totoracocha</span>
+</div>
+</div>
+<div class="flex text-[#FBBC05]">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+          "Pude agendar mi cita un domingo a las 11 pm cuando el spa estaba cerrado y al día siguiente me atendieron súper puntual. Sin filas ni tiempos muertos. 10/10."
+        </p>
+</div>
+</div>
+<!-- Garantía y Sellos de Bioseguridad -->
+<div class="p-4 rounded-xl bg-primary text-on-primary flex items-center gap-3.5 shadow-sm">
+<span class="material-symbols-outlined text-[32px] text-secondary-fixed shrink-0">shield_with_heart</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold">Garantía de Bioseguridad NOI</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">Esterilización de grado médico hospitalario en cada cabina y materiales 100% descartables.</span>
+</div>
+</div>
+</section>
+<!-- PREGUNTAS FRECUENTES (FAQ ACORDEÓN) -->
+<section class="px-gutter-mobile py-6 flex flex-col gap-4">
+<div>
+<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-bold">Claridad Total</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Preguntas Frecuentes</h2>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- FAQ 1 -->
+<details class="group p-4 rounded-xl bg-surface-container-lowest shadow-sm [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex justify-between items-center font-title-md text-title-md text-on-surface cursor-pointer select-none">
+<span>¿Dónde están ubicados en Cuenca y cuentan con parqueadero?</span>
+<span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2.5">
+          Estamos situados en un sector céntrico, seguro y de fácil acceso en Cuenca (cerca de la Av. Solano y El Vergel). Contamos con espacios de estacionamiento reservado para pacientes y facilidad de parqueo tarifado al pie del centro.
+        </p>
+</details>
+<!-- FAQ 2 -->
+<details class="group p-4 rounded-xl bg-surface-container-lowest shadow-sm [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex justify-between items-center font-title-md text-title-md text-on-surface cursor-pointer select-none">
+<span>¿Cómo funciona la confirmación inmediata de citas?</span>
+<span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2.5">
+          Al pulsar "Confirmar Cita Inmediata" en nuestro módulo web, tu turno se bloquea al instante en nuestro sistema médico y recibes un recordatorio automatizado por WhatsApp con la ficha de preparación previa (por ejemplo, venir sin maquillaje para faciales).
+        </p>
+</details>
+<!-- FAQ 3 -->
+<details class="group p-4 rounded-xl bg-surface-container-lowest shadow-sm [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex justify-between items-center font-title-md text-title-md text-on-surface cursor-pointer select-none">
+<span>¿Qué métodos de pago aceptan?</span>
+<span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2.5">
+          Aceptamos transferencias locales de Banco Pichincha, Banco de Guayaquil, Produbanco, Cooperativa JEP, efectivo, y todas las tarjetas de crédito o débito (con opción a diferir tratamientos o paquetes hasta 3 y 6 meses sin intereses).
+        </p>
+</details>
+<!-- FAQ 4 -->
+<details class="group p-4 rounded-xl bg-surface-container-lowest shadow-sm [&amp;_summary::-webkit-details-marker]:hidden">
+<summary class="flex justify-between items-center font-title-md text-title-md text-on-surface cursor-pointer select-none">
+<span>¿Cuál es la política si necesito reagendar mi cita?</span>
+<span class="material-symbols-outlined text-[20px] text-secondary transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2.5">
+          Entendemos que surgen imprevistos. Puedes reagendar tu cita sin costo alguno avisándonos con al menos 2 horas de anticipación a través de nuestro WhatsApp oficial para reasignar tu cupo sin penalización.
+        </p>
+</details>
+</div>
+</section>
+<!-- UBICACIÓN, MAPA Y HORARIOS -->
+<section class="px-gutter-mobile py-6 flex flex-col gap-4">
+<div>
+<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase font-bold">Encuéntranos</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Visítanos en Cuenca</h2>
+</div>
+<!-- Mapa Simulado / Visual Pipeline -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-md">
+<div class="w-full h-48 bg-cover bg-center" data-location="Cuenca, Ecuador" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKPvCSrFh-wSD8E8wtIEOETRRaigZPLKRfmfYLO6XCpGyKoUkS9PKg3WzNhf7K1Y2o46dDvElLKLJETBgeki2OEyrqi90ZGA44Tqyp1EiSKVt-1VFUVZd7GH5mjB199J6246m6PgghRtlwIlQl2CwDNy2vuGriRkEuIyh5G8axWvOB8_jVSCZ85N3R_U_FvaRn9EHkkCv3BjIa-hyCu9iLrZlwfqTW_hn02rTW-ucBMu_p2PFbrxtZuw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent pointer-events-none"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold">NOI Centro Estético</span>
+<span class="font-body-sm text-body-sm text-on-primary-container">Cuenca, Ecuador</span>
+</div>
+<a class="h-9 px-3 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold flex items-center gap-1 shadow-sm" href="https://maps.google.com/?q=Cuenca+Ecuador" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+<span>Waze / Maps</span>
+</a>
+</div>
+</div>
+<!-- Horarios Detallados -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[22px]">storefront</span>
+<span class="font-title-md text-title-md font-semibold">Horarios de Atención</span>
+</div>
+<div class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex justify-between py-1">
+<span class="font-medium text-on-surface">Lunes a Viernes:</span>
+<span>08:30 – 19:30</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="font-medium text-on-surface">Sábados:</span>
+<span>09:00 – 17:00</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="font-medium text-on-surface">Domingos:</span>
+<span class="text-secondary font-semibold">Previa cita online</span>
+</div>
+</div>
+<a class="w-full h-11 flex items-center justify-center gap-2 rounded-lg bg-surface-container-low text-primary font-label-lg text-label-lg mt-1" href="tel:0969539205">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Llamar directamente: 096 953 9205</span>
+</a>
+</div>
+</section>
+<!-- FOOTER & LEGAL -->
+<footer class="px-gutter-mobile pt-4 pb-8 flex flex-col gap-4 text-center">
+<div class="flex flex-col items-center gap-1">
+<span class="font-headline-sm text-headline-sm text-primary font-medium">NOI</span>
+<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase">Centro Estético Integral · Cuenca</span>
+</div>
+<!-- Legal Links -->
+<div class="flex flex-wrap justify-center items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<a class="hover:text-primary" href="#">Políticas de Privacidad</a>
+<span>•</span>
+<a class="hover:text-primary" href="#">Aviso Legal</a>
+<span>•</span>
+<a class="hover:text-primary" href="#">Protección de Datos</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant/80">
+      © 2025 NOI Centro Estético Integral. Todos los derechos reservados. Cuenca, Azuay, Ecuador.
+    </p>
+</footer>
+</div>
+<script>
+  // Interactive Day and Time Selector
+  (function() {
+    let diaSeleccionado = 'Lun 17';
+    let horaSeleccionada = '09:30 AM';
+    const resumenEl = document.getElementById('resumen-texto');
+    const tratamientoEl = document.getElementById('reserva-tratamiento');
+    const btnConfirmar = document.getElementById('btn-confirmar-cita');
+
+    function actualizarResumen() {
+      if (resumenEl) {
+        resumenEl.textContent = `${diaSeleccionado} · ${horaSeleccionada}`;
+      }
+    }
+
+    // Days click handlers
+    const diaButtons = document.querySelectorAll('.dia-btn');
+    diaButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        diaButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        diaSeleccionado = btn.getAttribute('data-dia') || 'Día';
+        actualizarResumen();
+      });
+    });
+
+    // Time click handlers
+    const horaButtons = document.querySelectorAll('.hora-btn');
+    horaButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        horaButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+        horaSeleccionada = btn.getAttribute('data-hora') || 'Hora';
+        actualizarResumen();
+      });
+    });
+
+    // Confirm Appointment CTA
+    if (btnConfirmar) {
+      btnConfirmar.addEventListener('click', () => {
+        const tratamiento = tratamientoEl ? tratamientoEl.value : 'Tratamiento';
+        const msg = encodeURIComponent(`Hola NOI Centro Estético, deseo confirmar mi cita online para: ${tratamiento} el día ${diaSeleccionado} a las ${horaSeleccionada}.`);
+        window.open(`https://api.whatsapp.com/send?phone=593969539205&text=${msg}`, '_blank');
+      });
+    }
+
+    // CRM Form Submit Handler
+    const crmForm = document.getElementById('crm-form');
+    if (crmForm) {
+      crmForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nombre = document.getElementById('crm-nombre')?.value || '';
+        const telefono = document.getElementById('crm-telefono')?.value || '';
+        const interes = document.getElementById('crm-interes')?.value || '';
+        const horarioRadio = document.querySelector('input[name="horario-contacto"]:checked');
+        const horario = horarioRadio ? horarioRadio.value : 'Cualquiera';
+        const notas = document.getElementById('crm-notas')?.value || 'Sin notas';
+
+        const mensajeCRM = encodeURIComponent(
+          `*SOLICITUD DE DIAGNÓSTICO VIP - NOI CUENCA*\n\n` +
+          `• *Nombre:* ${nombre}\n` +
+          `• *Teléfono:* +593 ${telefono}\n` +
+          `• *Interés:* ${interes}\n` +
+          `• *Horario Preferido:* ${horario}\n` +
+          `• *Notas:* ${notas}`
+        );
+
+        // Feedback to user
+        alert('¡Gracias! Te estamos redirigiendo a nuestro canal directo para confirmar tu diagnóstico.');
+        window.open(`https://api.whatsapp.com/send?phone=593969539205&text=${mensajeCRM}`, '_blank');
+        crmForm.reset();
+      });
+    }
+  })();
+</script></main><div class="fixed bottom-24 right-4 z-40 flex flex-col items-end gap-1 pointer-events-none"><div class="pointer-events-auto flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_4px_16px_rgba(22,52,45,0.08)]"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-label-sm text-label-sm text-primary tracking-wide">En línea · Cuenca</span></div><a aria-label="Contactar por WhatsApp" class="pointer-events-auto relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[0_8px_24px_rgba(37,211,102,0.4)] hover:scale-105 active:scale-95 transition-all" href="https://wa.me/593969539205?text=Hola%20NOI%20Centro%20Est%C3%A9tico,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios" rel="noopener noreferrer" target="_blank"><span class="absolute -inset-1 rounded-full bg-[#25D366]/30 animate-ping -z-10"></span><span class="material-symbols-outlined text-[28px]">chat</span></a></div><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[44px] transition-colors text-primary font-bold" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">spa</span><span class="font-label-sm text-label-sm">Inicio</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="tratamientos" href="#"><span class="material-symbols-outlined text-[22px]">medical_services</span><span class="font-label-sm text-label-sm">Tratamientos</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="agendar-cita" href="#"><span class="material-symbols-outlined text-[22px]">calendar_month</span><span class="font-label-sm text-label-sm">Agendar Cita</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="ubicacion" href="#"><span class="material-symbols-outlined text-[22px]">location_on</span><span class="font-label-sm text-label-sm">Ubicación</span></a></div></nav></body></html>
