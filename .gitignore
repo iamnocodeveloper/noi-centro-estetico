@@ -11,3 +11,5 @@ scratch/
 # IDE / Editors
 .vscode/
 .idea/
+
+.vercel
